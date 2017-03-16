@@ -10,7 +10,7 @@ import UIKit
 
 class CYRootTitleView: UIView {
     
-    typealias CYRootTitleItemClickHandle = (_ index: Int) -> Void
+    typealias CYRootTitleItemClickHandle = (index: Int) -> Void
     
     var itemClickHandle: CYRootTitleItemClickHandle?
     
