@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		561186871E7A8155003009D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186861E7A8155003009D2 /* AppDelegate.swift */; };
-		561186891E7A8155003009D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186881E7A8155003009D2 /* ViewController.swift */; };
-		5611868C1E7A8155003009D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5611868A1E7A8155003009D2 /* Main.storyboard */; };
-		5611868E1E7A8155003009D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5611868D1E7A8155003009D2 /* Assets.xcassets */; };
-		561186911E7A8155003009D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5611868F1E7A8155003009D2 /* LaunchScreen.storyboard */; };
 		5611869C1E7A8156003009D2 /* DragonflyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611869B1E7A8156003009D2 /* DragonflyTests.swift */; };
 		561186A71E7A8156003009D2 /* DragonflyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186A61E7A8156003009D2 /* DragonflyUITests.swift */; };
+		561186B71E7A81B8003009D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186B51E7A81B8003009D2 /* AppDelegate.swift */; };
+		561186B81E7A81B8003009D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561186B61E7A81B8003009D2 /* Assets.xcassets */; };
+		561186BE1E7A8252003009D2 /* CYRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186BD1E7A8252003009D2 /* CYRootViewController.swift */; };
+		561186D81E7A8585003009D2 /* CYClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186D71E7A8585003009D2 /* CYClassifyViewController.swift */; };
+		561186DA1E7A8590003009D2 /* CYFeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186D91E7A8590003009D2 /* CYFeaturedViewController.swift */; };
+		561186DC1E7A8597003009D2 /* CYLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186DB1E7A8597003009D2 /* CYLiveViewController.swift */; };
+		561186DE1E7A85A1003009D2 /* CYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186DD1E7A85A1003009D2 /* CYMineViewController.swift */; };
+		561186E01E7A85AA003009D2 /* CYRadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186DF1E7A85AA003009D2 /* CYRadioViewController.swift */; };
+		561186E21E7A85B4003009D2 /* CYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186E11E7A85B4003009D2 /* CYSearchViewController.swift */; };
+		561186E81E7A94F7003009D2 /* CYBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186E71E7A94F7003009D2 /* CYBaseNavigationController.swift */; };
+		561186EA1E7A9A7E003009D2 /* CYRootTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186E91E7A9A7E003009D2 /* CYRootTitleView.swift */; };
+		561186EC1E7A9A8B003009D2 /* CYRootTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561186EB1E7A9A8B003009D2 /* CYRootTitleView.xib */; };
+		561186EE1E7AAB7F003009D2 /* CYFeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561186ED1E7AAB7F003009D2 /* CYFeaturedViewController.xib */; };
+		561186F01E7AAC9E003009D2 /* CYFeaturedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186EF1E7AAC9E003009D2 /* CYFeaturedHeaderView.swift */; };
+		5DC4E2C96E7A80EC6A55BAB1 /* Pods_Dragonfly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +44,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4249269A82EFFF1689F3D332 /* Pods-Dragonfly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dragonfly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dragonfly/Pods-Dragonfly.debug.xcconfig"; sourceTree = "<group>"; };
 		561186831E7A8155003009D2 /* Dragonfly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dragonfly.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		561186861E7A8155003009D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		561186881E7A8155003009D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5611868B1E7A8155003009D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5611868D1E7A8155003009D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		561186901E7A8155003009D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		561186921E7A8155003009D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561186921E7A8155003009D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		561186971E7A8156003009D2 /* DragonflyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonflyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5611869B1E7A8156003009D2 /* DragonflyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonflyTests.swift; sourceTree = "<group>"; };
 		5611869D1E7A8156003009D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561186A21E7A8156003009D2 /* DragonflyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonflyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		561186A61E7A8156003009D2 /* DragonflyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonflyUITests.swift; sourceTree = "<group>"; };
 		561186A81E7A8156003009D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561186B51E7A81B8003009D2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		561186B61E7A81B8003009D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		561186BD1E7A8252003009D2 /* CYRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYRootViewController.swift; sourceTree = "<group>"; };
+		561186D71E7A8585003009D2 /* CYClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYClassifyViewController.swift; sourceTree = "<group>"; };
+		561186D91E7A8590003009D2 /* CYFeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedViewController.swift; sourceTree = "<group>"; };
+		561186DB1E7A8597003009D2 /* CYLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYLiveViewController.swift; sourceTree = "<group>"; };
+		561186DD1E7A85A1003009D2 /* CYMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYMineViewController.swift; sourceTree = "<group>"; };
+		561186DF1E7A85AA003009D2 /* CYRadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYRadioViewController.swift; sourceTree = "<group>"; };
+		561186E11E7A85B4003009D2 /* CYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYSearchViewController.swift; sourceTree = "<group>"; };
+		561186E71E7A94F7003009D2 /* CYBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYBaseNavigationController.swift; sourceTree = "<group>"; };
+		561186E91E7A9A7E003009D2 /* CYRootTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYRootTitleView.swift; sourceTree = "<group>"; };
+		561186EB1E7A9A8B003009D2 /* CYRootTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRootTitleView.xib; sourceTree = "<group>"; };
+		561186ED1E7AAB7F003009D2 /* CYFeaturedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYFeaturedViewController.xib; sourceTree = "<group>"; };
+		561186EF1E7AAC9E003009D2 /* CYFeaturedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedHeaderView.swift; sourceTree = "<group>"; };
+		8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dragonfly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B060701B83D1ED74BEC0FEFA /* Pods-Dragonfly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dragonfly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dragonfly/Pods-Dragonfly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC4E2C96E7A80EC6A55BAB1 /* Pods_Dragonfly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 				5611869A1E7A8156003009D2 /* DragonflyTests */,
 				561186A51E7A8156003009D2 /* DragonflyUITests */,
 				561186841E7A8155003009D2 /* Products */,
+				EA2ED3045962FD760B383DF0 /* Pods */,
+				60A41B03DAC8081B4C67578E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +122,15 @@
 		561186851E7A8155003009D2 /* Dragonfly */ = {
 			isa = PBXGroup;
 			children = (
-				561186861E7A8155003009D2 /* AppDelegate.swift */,
-				561186881E7A8155003009D2 /* ViewController.swift */,
-				5611868A1E7A8155003009D2 /* Main.storyboard */,
-				5611868D1E7A8155003009D2 /* Assets.xcassets */,
-				5611868F1E7A8155003009D2 /* LaunchScreen.storyboard */,
-				561186921E7A8155003009D2 /* Info.plist */,
+				561186E31E7A94E7003009D2 /* Base */,
+				561186BF1E7A8516003009D2 /* Classify */,
+				561186C31E7A8516003009D2 /* Featured */,
+				561186C71E7A8516003009D2 /* Live */,
+				561186CB1E7A8516003009D2 /* Mine */,
+				561186CF1E7A8516003009D2 /* Radio */,
+				561186D31E7A8516003009D2 /* Search */,
+				561186B91E7A81C7003009D2 /* Main */,
+				561186B41E7A81B8003009D2 /* App */,
 			);
 			path = Dragonfly;
 			sourceTree = "<group>";
@@ -125,6 +153,293 @@
 			path = DragonflyUITests;
 			sourceTree = "<group>";
 		};
+		561186B41E7A81B8003009D2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				561186921E7A8155003009D2 /* Info.plist */,
+				561186B51E7A81B8003009D2 /* AppDelegate.swift */,
+				561186B61E7A81B8003009D2 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		561186B91E7A81C7003009D2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				561186BA1E7A81DB003009D2 /* Controller */,
+				561186BB1E7A81DB003009D2 /* Model */,
+				561186BC1E7A81DB003009D2 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		561186BA1E7A81DB003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186BD1E7A8252003009D2 /* CYRootViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186BB1E7A81DB003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186BC1E7A81DB003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561186E91E7A9A7E003009D2 /* CYRootTitleView.swift */,
+				561186EB1E7A9A8B003009D2 /* CYRootTitleView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186BF1E7A8516003009D2 /* Classify */ = {
+			isa = PBXGroup;
+			children = (
+				561186C01E7A8516003009D2 /* Controller */,
+				561186C11E7A8516003009D2 /* Model */,
+				561186C21E7A8516003009D2 /* View */,
+			);
+			path = Classify;
+			sourceTree = "<group>";
+		};
+		561186C01E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186D71E7A8585003009D2 /* CYClassifyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186C11E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186C21E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186C31E7A8516003009D2 /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				561186C41E7A8516003009D2 /* Controller */,
+				561186C51E7A8516003009D2 /* Model */,
+				561186C61E7A8516003009D2 /* View */,
+			);
+			path = Featured;
+			sourceTree = "<group>";
+		};
+		561186C41E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186D91E7A8590003009D2 /* CYFeaturedViewController.swift */,
+				561186ED1E7AAB7F003009D2 /* CYFeaturedViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186C51E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186C61E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561186EF1E7AAC9E003009D2 /* CYFeaturedHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186C71E7A8516003009D2 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				561186C81E7A8516003009D2 /* Controller */,
+				561186C91E7A8516003009D2 /* Model */,
+				561186CA1E7A8516003009D2 /* View */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		561186C81E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186DB1E7A8597003009D2 /* CYLiveViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186C91E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186CA1E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186CB1E7A8516003009D2 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				561186CC1E7A8516003009D2 /* Controller */,
+				561186CD1E7A8516003009D2 /* Model */,
+				561186CE1E7A8516003009D2 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		561186CC1E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186DD1E7A85A1003009D2 /* CYMineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186CD1E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186CE1E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186CF1E7A8516003009D2 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				561186D01E7A8516003009D2 /* Controller */,
+				561186D11E7A8516003009D2 /* Model */,
+				561186D21E7A8516003009D2 /* View */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		561186D01E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186DF1E7A85AA003009D2 /* CYRadioViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186D11E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186D21E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186D31E7A8516003009D2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				561186D41E7A8516003009D2 /* Controller */,
+				561186D51E7A8516003009D2 /* Model */,
+				561186D61E7A8516003009D2 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		561186D41E7A8516003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186E11E7A85B4003009D2 /* CYSearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186D51E7A8516003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186D61E7A8516003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561186E31E7A94E7003009D2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				561186E41E7A94E7003009D2 /* Controller */,
+				561186E51E7A94E7003009D2 /* Model */,
+				561186E61E7A94E7003009D2 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		561186E41E7A94E7003009D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				561186E71E7A94F7003009D2 /* CYBaseNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		561186E51E7A94E7003009D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561186E61E7A94E7003009D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60A41B03DAC8081B4C67578E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA2ED3045962FD760B383DF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4249269A82EFFF1689F3D332 /* Pods-Dragonfly.debug.xcconfig */,
+				B060701B83D1ED74BEC0FEFA /* Pods-Dragonfly.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +447,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 561186AB1E7A8156003009D2 /* Build configuration list for PBXNativeTarget "Dragonfly" */;
 			buildPhases = (
+				151820887640C193009646AA /* [CP] Check Pods Manifest.lock */,
 				5611867F1E7A8155003009D2 /* Sources */,
 				561186801E7A8155003009D2 /* Frameworks */,
 				561186811E7A8155003009D2 /* Resources */,
+				8F869B1228E1D29DD23B7B33 /* [CP] Embed Pods Frameworks */,
+				2B2C3E643AFCF44D03E28FE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,13 +505,15 @@
 		5611867B1E7A8155003009D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CY;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = cy;
 				TargetAttributes = {
 					561186821E7A8155003009D2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = XDA2CE2AR2;
+						ProvisioningStyle = Manual;
 					};
 					561186961E7A8156003009D2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -232,9 +552,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561186911E7A8155003009D2 /* LaunchScreen.storyboard in Resources */,
-				5611868E1E7A8155003009D2 /* Assets.xcassets in Resources */,
-				5611868C1E7A8155003009D2 /* Main.storyboard in Resources */,
+				561186B81E7A81B8003009D2 /* Assets.xcassets in Resources */,
+				561186EE1E7AAB7F003009D2 /* CYFeaturedViewController.xib in Resources */,
+				561186EC1E7A9A8B003009D2 /* CYRootTitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +574,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		151820887640C193009646AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B2C3E643AFCF44D03E28FE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dragonfly/Pods-Dragonfly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F869B1228E1D29DD23B7B33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dragonfly/Pods-Dragonfly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5611867F1E7A8155003009D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561186891E7A8155003009D2 /* ViewController.swift in Sources */,
-				561186871E7A8155003009D2 /* AppDelegate.swift in Sources */,
+				561186E21E7A85B4003009D2 /* CYSearchViewController.swift in Sources */,
+				561186DC1E7A8597003009D2 /* CYLiveViewController.swift in Sources */,
+				561186DE1E7A85A1003009D2 /* CYMineViewController.swift in Sources */,
+				561186DA1E7A8590003009D2 /* CYFeaturedViewController.swift in Sources */,
+				561186E81E7A94F7003009D2 /* CYBaseNavigationController.swift in Sources */,
+				561186E01E7A85AA003009D2 /* CYRadioViewController.swift in Sources */,
+				561186F01E7AAC9E003009D2 /* CYFeaturedHeaderView.swift in Sources */,
+				561186BE1E7A8252003009D2 /* CYRootViewController.swift in Sources */,
+				561186EA1E7A9A7E003009D2 /* CYRootTitleView.swift in Sources */,
+				561186D81E7A8585003009D2 /* CYClassifyViewController.swift in Sources */,
+				561186B71E7A81B8003009D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +671,6 @@
 			targetProxy = 561186A31E7A8156003009D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5611868A1E7A8155003009D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5611868B1E7A8155003009D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5611868F1E7A8155003009D2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				561186901E7A8155003009D2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		561186A91E7A8156003009D2 /* Debug */ = {
@@ -410,24 +768,34 @@
 		};
 		561186AC1E7A8156003009D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4249269A82EFFF1689F3D332 /* Pods-Dragonfly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XDA2CE2AR2;
 				INFOPLIST_FILE = Dragonfly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = c.Dragonfly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f725eb8f-85fa-4e6d-b54e-f3ae2f06abd3";
+				PROVISIONING_PROFILE_SPECIFIER = whjAll_profile_dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		561186AD1E7A8156003009D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B060701B83D1ED74BEC0FEFA /* Pods-Dragonfly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XDA2CE2AR2;
 				INFOPLIST_FILE = Dragonfly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = c.Dragonfly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f725eb8f-85fa-4e6d-b54e-f3ae2f06abd3";
+				PROVISIONING_PROFILE_SPECIFIER = whjAll_profile_dev;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -505,6 +873,7 @@
 				561186AD1E7A8156003009D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		561186AE1E7A8156003009D2 /* Build configuration list for PBXNativeTarget "DragonflyTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +882,7 @@
 				561186B01E7A8156003009D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		561186B11E7A8156003009D2 /* Build configuration list for PBXNativeTarget "DragonflyUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +891,7 @@
 				561186B31E7A8156003009D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

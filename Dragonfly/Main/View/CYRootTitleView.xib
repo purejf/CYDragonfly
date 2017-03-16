@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CYRootTitleView" customModule="Dragonfly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAL-JH-6k3">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="图片">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tL2-0r-Ppy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-4x-h2P">
+                    <rect key="frame" x="75" y="0.0" width="75" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="精选">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0ii-Om-GeE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-Dg-K2S">
+                    <rect key="frame" x="150" y="0.0" width="75" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="分类">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="z3H-uS-ehB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fe-oS-Wnq">
+                    <rect key="frame" x="225" y="0.0" width="75" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="直播">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="R0O-8o-9fe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-Un-Xrp">
+                    <rect key="frame" x="300" y="0.0" width="75" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="电台">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="dIU-Ql-MRF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hFO-Dg-K2S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="00J-xS-YAp"/>
+                <constraint firstItem="7Fe-oS-Wnq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5SI-Se-oPM"/>
+                <constraint firstItem="SAL-JH-6k3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/5" id="NhC-l4-LUi"/>
+                <constraint firstAttribute="bottom" secondItem="SAL-JH-6k3" secondAttribute="bottom" id="OIt-F6-Mb7"/>
+                <constraint firstItem="lxi-Un-Xrp" firstAttribute="leading" secondItem="7Fe-oS-Wnq" secondAttribute="trailing" id="RoJ-9k-CMN"/>
+                <constraint firstAttribute="bottom" secondItem="0Rv-4x-h2P" secondAttribute="bottom" id="Sp8-4h-5wT"/>
+                <constraint firstItem="hFO-Dg-K2S" firstAttribute="leading" secondItem="0Rv-4x-h2P" secondAttribute="trailing" id="XzS-kA-K2F"/>
+                <constraint firstItem="0Rv-4x-h2P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YAL-xm-NQs"/>
+                <constraint firstItem="lxi-Un-Xrp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ygm-8a-ncZ"/>
+                <constraint firstAttribute="bottom" secondItem="7Fe-oS-Wnq" secondAttribute="bottom" id="c6U-W5-5r6"/>
+                <constraint firstAttribute="trailing" secondItem="lxi-Un-Xrp" secondAttribute="trailing" id="cY5-aO-sxZ"/>
+                <constraint firstAttribute="bottom" secondItem="hFO-Dg-K2S" secondAttribute="bottom" id="ctx-Zl-kht"/>
+                <constraint firstAttribute="bottom" secondItem="lxi-Un-Xrp" secondAttribute="bottom" id="hpq-Td-OI0"/>
+                <constraint firstItem="7Fe-oS-Wnq" firstAttribute="width" secondItem="hFO-Dg-K2S" secondAttribute="width" id="j6K-J7-x1z"/>
+                <constraint firstItem="0Rv-4x-h2P" firstAttribute="leading" secondItem="SAL-JH-6k3" secondAttribute="trailing" id="kK1-Dm-4ah"/>
+                <constraint firstItem="7Fe-oS-Wnq" firstAttribute="leading" secondItem="hFO-Dg-K2S" secondAttribute="trailing" id="oha-bA-NUU"/>
+                <constraint firstItem="SAL-JH-6k3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qaR-hq-zLh"/>
+                <constraint firstItem="0Rv-4x-h2P" firstAttribute="width" secondItem="SAL-JH-6k3" secondAttribute="width" id="u2L-3h-Njt"/>
+                <constraint firstItem="hFO-Dg-K2S" firstAttribute="width" secondItem="0Rv-4x-h2P" secondAttribute="width" id="uKv-BF-C1g"/>
+                <constraint firstItem="SAL-JH-6k3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z6I-TD-lGZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="classifyBtn" destination="hFO-Dg-K2S" id="ztU-4h-WkB"/>
+                <outlet property="featuredBtn" destination="0Rv-4x-h2P" id="6Uy-mO-KrA"/>
+                <outlet property="liveBtn" destination="7Fe-oS-Wnq" id="xTf-7O-Bsj"/>
+                <outlet property="mineBtn" destination="SAL-JH-6k3" id="u6W-lB-VYA"/>
+                <outlet property="radioBtn" destination="lxi-Un-Xrp" id="JRU-gv-f6n"/>
+            </connections>
+            <point key="canvasLocation" x="13.5" y="-264"/>
+        </view>
+    </objects>
+</document>
