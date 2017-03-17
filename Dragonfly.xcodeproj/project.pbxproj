@@ -23,9 +23,10 @@
 		561186EC1E7A9A8B003009D2 /* CYRootTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561186EB1E7A9A8B003009D2 /* CYRootTitleView.xib */; };
 		561186EE1E7AAB7F003009D2 /* CYFeaturedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561186ED1E7AAB7F003009D2 /* CYFeaturedViewController.xib */; };
 		561186F01E7AAC9E003009D2 /* CYFeaturedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186EF1E7AAC9E003009D2 /* CYFeaturedHeaderView.swift */; };
+		561186F41E7B89E8003009D2 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186F31E7B89E8003009D2 /* UICollectionViewCell+Extension.swift */; };
+		561186F61E7B8A08003009D2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561186F51E7B8A08003009D2 /* UITableViewCell+Extension.swift */; };
 		56F2FA051E7ACE90002995D1 /* CYFeatureTopicTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FA041E7ACE90002995D1 /* CYFeatureTopicTitleView.swift */; };
 		56F2FA091E7ACEE9002995D1 /* CYFeaturedTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FA081E7ACEE9002995D1 /* CYFeaturedTopicCell.swift */; };
-		56F2FA0B1E7AD177002995D1 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FA0A1E7AD177002995D1 /* UITableViewCell+Extension.swift */; };
 		5DC4E2C96E7A80EC6A55BAB1 /* Pods_Dragonfly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +71,10 @@
 		561186EB1E7A9A8B003009D2 /* CYRootTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRootTitleView.xib; sourceTree = "<group>"; };
 		561186ED1E7AAB7F003009D2 /* CYFeaturedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYFeaturedViewController.xib; sourceTree = "<group>"; };
 		561186EF1E7AAC9E003009D2 /* CYFeaturedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedHeaderView.swift; sourceTree = "<group>"; };
+		561186F31E7B89E8003009D2 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		561186F51E7B8A08003009D2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		56F2FA041E7ACE90002995D1 /* CYFeatureTopicTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeatureTopicTitleView.swift; sourceTree = "<group>"; };
 		56F2FA081E7ACEE9002995D1 /* CYFeaturedTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedTopicCell.swift; sourceTree = "<group>"; };
-		56F2FA0A1E7AD177002995D1 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extension.swift"; path = "Dragonfly/Featured/View/UITableViewCell+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dragonfly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B060701B83D1ED74BEC0FEFA /* Pods-Dragonfly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dragonfly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dragonfly/Pods-Dragonfly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -427,7 +429,8 @@
 		561186E61E7A94E7003009D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				56F2FA0A1E7AD177002995D1 /* UITableViewCell+Extension.swift */,
+				561186F51E7B8A08003009D2 /* UITableViewCell+Extension.swift */,
+				561186F31E7B89E8003009D2 /* UICollectionViewCell+Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,14 +640,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				561186E21E7A85B4003009D2 /* CYSearchViewController.swift in Sources */,
+				561186F61E7B8A08003009D2 /* UITableViewCell+Extension.swift in Sources */,
 				561186DC1E7A8597003009D2 /* CYLiveViewController.swift in Sources */,
 				561186DE1E7A85A1003009D2 /* CYMineViewController.swift in Sources */,
 				561186DA1E7A8590003009D2 /* CYFeaturedViewController.swift in Sources */,
-				56F2FA0B1E7AD177002995D1 /* UITableViewCell+Extension.swift in Sources */,
 				56F2FA051E7ACE90002995D1 /* CYFeatureTopicTitleView.swift in Sources */,
 				561186E81E7A94F7003009D2 /* CYBaseNavigationController.swift in Sources */,
 				561186E01E7A85AA003009D2 /* CYRadioViewController.swift in Sources */,
 				561186F01E7AAC9E003009D2 /* CYFeaturedHeaderView.swift in Sources */,
+				561186F41E7B89E8003009D2 /* UICollectionViewCell+Extension.swift in Sources */,
 				561186BE1E7A8252003009D2 /* CYRootViewController.swift in Sources */,
 				561186EA1E7A9A7E003009D2 /* CYRootTitleView.swift in Sources */,
 				561186D81E7A8585003009D2 /* CYClassifyViewController.swift in Sources */,

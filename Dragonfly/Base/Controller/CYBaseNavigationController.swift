@@ -13,7 +13,7 @@ class CYBaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationBar.isTranslucent = false
+        navigationBar.isTranslucent = false
         
     }
 

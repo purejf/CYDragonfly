@@ -12,7 +12,7 @@ class CYClassifyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.blue
     }
     
 }

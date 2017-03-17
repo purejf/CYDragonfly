@@ -18,71 +18,70 @@ class CYRootViewController: UIViewController, UIPageViewControllerDelegate, UIPa
         setup()
         
         // 添加子控制器
-        addChilds()
+        setupChilds()
         
         // 配置分页
         setupPages()
     }
     
-    // 配置
     private func setup() {
         view.backgroundColor = UIColor.white
-        self.titleV.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width - 80, height: 36)
-        let leftItem = UIBarButtonItem(customView: self.titleV)
-        self.navigationItem.leftBarButtonItem = leftItem
+        titleV.frame = CGRect(x: 0, y: 0, width: view.frame.size.width - 80, height: 36)
+        let leftItem = UIBarButtonItem(customView: titleV)
+        navigationItem.leftBarButtonItem = leftItem
     }
     
-    // 添加子控制器
-    private func addChilds() {
-        self.pageController.willMove(toParentViewController: self)
-        self.addChildViewController(self.pageController)
-        self.pageController.didMove(toParentViewController: self)
-        self.view.addSubview(self.pageController.view)
-        self.pageController.view.snp.makeConstraints { (make) in
+    private func setupChilds() {
+        pageController.willMove(toParentViewController: self)
+        addChildViewController(pageController)
+        pageController.didMove(toParentViewController: self)
+        view.addSubview(pageController.view)
+        pageController.view.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
         }
     }
-    // 配置分页
+    
     private func setupPages() {
-        self.pageController.setViewControllers([self.vcs.first!], direction: .forward, animated: true, completion: nil)
+        pageController.setViewControllers([vcs.first!], direction: .forward, animated: true, completion: nil)
+    }
+    
+    private func vcIndex(controller: UIViewController) -> Int? {
+        return vcs.index(of: controller)
+    }
+    
+    private func changeVc(index: Int) {
+        let vc = vcs[index]
+        pageController.setViewControllers([vc], direction: .forward, animated: false, completion: nil)
     }
     
     // MARK: UIPageViewControllerDelegate, UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = self.vcIndex(controller: viewController)
+        var index = vcIndex(controller: viewController)
         if index == NSNotFound || index == nil {
             return nil
         } else {
             index = index! + 1
-            if (index == self.vcs.count) {
+            if (index == vcs.count) {
                 return nil
             }
-            return self.vcs[index!]
+            return vcs[index!]
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = self.vcs.index(of: viewController)
+        var index = vcs.index(of: viewController)
         if index == 0 || index == NSNotFound || index == nil {
             return nil
         }
         index = index! - 1
-        return self.vcs[index!]
+        return vcs[index!]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        // let vc = pageViewController.viewControllers?.first
-        // let index = self.vcIndex(controller: vc!)
-    }
-    
-    private func vcIndex(controller: UIViewController) -> Int? {
-        return self.vcs.index(of: controller)
-    }
-    
-    private func changeVc(index: Int) {
-        let vc = self.vcs[index]
-        self.pageController.setViewControllers([vc], direction: .forward, animated: false, completion: nil)
+        let vc = pageViewController.viewControllers?.first
+        let index = vcIndex(controller: vc!)
+        titleV.index = index!
     }
     
     private lazy var pageController: UIPageViewController = {
@@ -94,9 +93,9 @@ class CYRootViewController: UIViewController, UIPageViewControllerDelegate, UIPa
     
     private lazy var titleV: CYRootTitleView = {
         let titleV = CYRootTitleView.titleV()
-        titleV.itemClickHandle = { (index: Int) in
+        titleV.setupItemClickHandle(handle: { (index) in
             self.changeVc(index: index)
-        }
+        })
         return titleV
     }()
     

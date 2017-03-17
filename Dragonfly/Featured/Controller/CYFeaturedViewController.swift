@@ -17,18 +17,17 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // 配置
         setup()
-        
     }
     
     // 配置
     private func setup() {
-        self.view.backgroundColor = UIColor.orange
-        self.tableView.tableFooterView = UIView()
-        self.tableView.tableHeaderView = self.header
+        view.backgroundColor = UIColor.orange
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = header
     }
     
-    
     // MARK: UITableViewDelegate, UITableViewDataSource
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -38,21 +37,33 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = CYFeaturedTopicCell.cell(WithTableView: tableView)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
+    // 人气榜单、付费精品、畅销小说、直播专区、蜻蜓商城
+    private func _headerBottomItemClick(type: CYFeaturedHeaderBottomItemType) {
+        switch type {
+        case .Rank: break
+        case .Featured: break
+        case .Novel: break
+        case .Live: break
+        case .Mall: break
+        }
+    }
+    
     private lazy var header: CYFeaturedHeaderView = {
         let header = CYFeaturedHeaderView()
         header.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
-        header.setupBannerItemClickHandle(handle: { (type) in
+        header.setupBannerItemClickHandle(handle: { (index) in
             
         })
-        header.setupBottomItemClickHandle(handle: { (index) in
-            
+        header.setupBottomItemClickHandle(handle: { (type) in
+            self._headerBottomItemClick(type: type)
         })
         return header
     }()

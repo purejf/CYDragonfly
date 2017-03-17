@@ -10,9 +10,9 @@ import UIKit
 
 class CYRootTitleView: UIView {
     
-    typealias CYRootTitleItemClickHandle = (index: Int) -> Void
+    typealias CYRootTitleItemClickHandle = (_ index: Int) -> Void
     
-    var itemClickHandle: CYRootTitleItemClickHandle?
+    private var itemClickHandle: CYRootTitleItemClickHandle?
     
     @IBOutlet weak var mineBtn: UIButton!
     
@@ -28,7 +28,7 @@ class CYRootTitleView: UIView {
     
     var index: Int = 0 {
         didSet {
-            let btn = self.viewWithTag(index + 1) as? UIButton
+            let btn = viewWithTag(index + 1) as? UIButton
             if let btn = btn {
                 tmpBtn?.isSelected = false
                 btn.isSelected = true
@@ -41,11 +41,14 @@ class CYRootTitleView: UIView {
         return Bundle.main.loadNibNamed("CYRootTitleView", owner: nil, options: nil)?.first as! CYRootTitleView
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        tmpBtn = self.mineBtn
+    func setupItemClickHandle(handle: @escaping CYRootTitleItemClickHandle) {
+        itemClickHandle = handle
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        tmpBtn = mineBtn
+    }
     
     @IBAction private func btnClick(_ sender: UIButton) {
         if sender.isSelected {

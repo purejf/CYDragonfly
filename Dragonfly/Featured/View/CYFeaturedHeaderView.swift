@@ -24,24 +24,28 @@ class CYFeaturedItemView: UIView {
     // 添加子视图
     private func setup() {
         
-        // titleL
-        self.titleL.snp.makeConstraints { (make) in
+        // 父视图未添加约束
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = UIColor.green
+        
+        // 图片
+        img.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.7)
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(0)
+            make.height.equalToSuperview().multipliedBy(0.66)
         }
         
-        // img
-        self.img.snp.makeConstraints { (make) in
+        // 标题
+        titleL.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalTo(self.titleL.snp.bottom)
+            make.top.equalTo(img.snp.bottom)
         }
     }
     
     var title: String?  {
         didSet {
             if let vTitle = title {
-                self.titleL.text = vTitle
+                titleL.text = vTitle
             }
         }
     }
@@ -49,7 +53,7 @@ class CYFeaturedItemView: UIView {
     var image: String? {
         didSet {
             if let vImg = image {
-                self.img.image = UIImage(named: vImg)
+                img.image = UIImage(named: vImg)
             }
         }
     }
@@ -66,6 +70,7 @@ class CYFeaturedItemView: UIView {
     private lazy var img: UIImageView = {
         let img = UIImageView()
         self.addSubview(img)
+        img.backgroundColor = UIColor.lightGray
         img.contentMode = .center
         return img
     }()
@@ -80,10 +85,10 @@ enum CYFeaturedHeaderBottomItemType: Int {
 }
 
 class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
- 
-    typealias CYFeaturedBottomItemClickHandle = (_ index: Int) -> Void
     
-    typealias CYFeaturedBannerItemClickHandle = (_ type: CYFeaturedHeaderBottomItemType) -> Void
+    typealias CYFeaturedBottomItemClickHandle = (_ type: CYFeaturedHeaderBottomItemType) -> Void
+    
+    typealias CYFeaturedBannerItemClickHandle = (_ index: Int) -> Void
     
     private let titles = {
         return ["人气榜单",
@@ -101,9 +106,9 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
                 "蜻蜓商城"]
     }()
     
-   private var bottomItemClickHandle: CYFeaturedBottomItemClickHandle?
+    private var bottomItemClickHandle: CYFeaturedBottomItemClickHandle?
     
-   private var bannerItemClickHandle: CYFeaturedBannerItemClickHandle?
+    private var bannerItemClickHandle: CYFeaturedBannerItemClickHandle?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -127,24 +132,44 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
     // 添加子视图
     private func setupSubs() {
         
-        // col
-        self.col.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, -frame.size.height * 0.3, 0))
+        // 轮播
+        col.snp.makeConstraints { (make) in
+            make.left.right.top.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.66)
         }
         
-        // bottomV
-        self.bottomV.snp.makeConstraints { (make) in
+        // 底部选项容器视图
+        bottomV.snp.makeConstraints { (make) in
             make.left.bottom.right.equalToSuperview()
-            make.top.equalTo(self.col.snp.bottom)
+            make.top.equalTo(col.snp.bottom)
         }
         
-        // subs
+        // 底部选项视图
         for index in 0...titles.count - 1 {
             let title = titles[index]
             let image = images[index]
             let itemV = CYFeaturedItemView()
-            addSubview(itemV)
+            bottomV.addSubview(itemV)
             itemV.tag = index + 1
+            if index == 0 {
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.top.bottom.equalToSuperview()
+                    make.width.equalToSuperview().multipliedBy(1.0 / CGFloat(titles.count))
+                })
+            } else if index == titles.count - 1 {
+                let preItemV = bottomV.viewWithTag(index) as! CYFeaturedItemView
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.equalTo(preItemV.snp.right)
+                    make.top.bottom.right.equalToSuperview()
+                })
+            } else {
+                let preItemV = bottomV.viewWithTag(index) as! CYFeaturedItemView
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.equalTo(preItemV.snp.right)
+                    make.top.bottom.equalToSuperview()
+                    make.width.equalTo(preItemV)
+                })
+            }
             itemV.image = image
             itemV.title = title
             itemV.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(itemVTapGestHandle(tap:))))
@@ -156,18 +181,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
         if let bottomItemClickHandle = bottomItemClickHandle {
             let itemV = tap.view
             if let itemV = itemV {
-                bottomItemClickHandle(itemV.tag - 1)
-            }
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if (self.titles.count > 0) {
-            let itemW = CGFloat(self.frame.size.width) / CGFloat(self.titles.count)
-            for index in 0...self.titles.count - 1 {
-                let itemV = self.viewWithTag(index + 1) as! CYFeaturedItemView
-                itemV.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: self.frame.size.height)
+                bottomItemClickHandle(CYFeaturedHeaderBottomItemType(rawValue: itemV.tag - 1)!)
             }
         }
     }
@@ -175,6 +189,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
     private lazy var col: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let col = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        col.backgroundColor = UIColor.yellow
         col.delegate = self
         col.dataSource = self
         self.addSubview(col)
@@ -184,6 +199,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
     private lazy var bottomV: UIView = {
         let bv = UIView()
         self.addSubview(bv)
+        bv.backgroundColor = UIColor.red
         return bv
     }()
     
@@ -198,7 +214,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell.init()
+        return UICollectionViewCell.cell(WithCollectionView: collectionView, indexPath: indexPath)
     }
     
 }
