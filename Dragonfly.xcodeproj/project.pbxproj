@@ -31,6 +31,11 @@
 		561187691E7BC81F003009D2 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561187621E7BC81F003009D2 /* UITableViewCell+Extension.swift */; };
 		5611876A1E7BC81F003009D2 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561187631E7BC81F003009D2 /* UIView+Nib.swift */; };
 		5611876C1E7BC841003009D2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611876B1E7BC841003009D2 /* UIImageView+Extension.swift */; };
+		5611876E1E7BDAE8003009D2 /* CYClassifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5611876D1E7BDAE8003009D2 /* CYClassifyViewController.xib */; };
+		561187711E7BDC14003009D2 /* CYClassifyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5611876F1E7BDC14003009D2 /* CYClassifyViewCell.swift */; };
+		561187721E7BDC14003009D2 /* CYClassifyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561187701E7BDC14003009D2 /* CYClassifyViewCell.xib */; };
+		561187751E7BDC29003009D2 /* CYClassifyViewEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561187731E7BDC29003009D2 /* CYClassifyViewEditCell.swift */; };
+		561187761E7BDC29003009D2 /* CYClassifyViewEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561187741E7BDC29003009D2 /* CYClassifyViewEditCell.xib */; };
 		56F2FA051E7ACE90002995D1 /* CYFeaturedTopicTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FA041E7ACE90002995D1 /* CYFeaturedTopicTitleView.swift */; };
 		56F2FA091E7ACEE9002995D1 /* CYFeaturedTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FA081E7ACEE9002995D1 /* CYFeaturedTopicCell.swift */; };
 		5DC4E2C96E7A80EC6A55BAB1 /* Pods_Dragonfly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */; };
@@ -85,6 +90,11 @@
 		561187621E7BC81F003009D2 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		561187631E7BC81F003009D2 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		5611876B1E7BC841003009D2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		5611876D1E7BDAE8003009D2 /* CYClassifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYClassifyViewController.xib; sourceTree = "<group>"; };
+		5611876F1E7BDC14003009D2 /* CYClassifyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYClassifyViewCell.swift; sourceTree = "<group>"; };
+		561187701E7BDC14003009D2 /* CYClassifyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYClassifyViewCell.xib; sourceTree = "<group>"; };
+		561187731E7BDC29003009D2 /* CYClassifyViewEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYClassifyViewEditCell.swift; sourceTree = "<group>"; };
+		561187741E7BDC29003009D2 /* CYClassifyViewEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYClassifyViewEditCell.xib; sourceTree = "<group>"; };
 		56F2FA041E7ACE90002995D1 /* CYFeaturedTopicTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedTopicTitleView.swift; sourceTree = "<group>"; };
 		56F2FA081E7ACEE9002995D1 /* CYFeaturedTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CYFeaturedTopicCell.swift; sourceTree = "<group>"; };
 		8D56F6DDB35E9F33A5FE7895 /* Pods_Dragonfly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dragonfly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				561186D71E7A8585003009D2 /* CYClassifyViewController.swift */,
+				5611876D1E7BDAE8003009D2 /* CYClassifyViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +257,10 @@
 		561186C21E7A8516003009D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5611876F1E7BDC14003009D2 /* CYClassifyViewCell.swift */,
+				561187701E7BDC14003009D2 /* CYClassifyViewCell.xib */,
+				561187731E7BDC29003009D2 /* CYClassifyViewEditCell.swift */,
+				561187741E7BDC29003009D2 /* CYClassifyViewEditCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,9 +670,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				561187651E7BC81F003009D2 /* CYCarouselView.xib in Resources */,
+				561187721E7BDC14003009D2 /* CYClassifyViewCell.xib in Resources */,
 				561186B81E7A81B8003009D2 /* Assets.xcassets in Resources */,
 				561187671E7BC81F003009D2 /* CYCarouselViewCell.xib in Resources */,
 				561186EE1E7AAB7F003009D2 /* CYFeaturedViewController.xib in Resources */,
+				5611876E1E7BDAE8003009D2 /* CYClassifyViewController.xib in Resources */,
+				561187761E7BDC29003009D2 /* CYClassifyViewEditCell.xib in Resources */,
 				561186EC1E7A9A8B003009D2 /* CYRootTitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561187711E7BDC14003009D2 /* CYClassifyViewCell.swift in Sources */,
 				561186E21E7A85B4003009D2 /* CYSearchViewController.swift in Sources */,
 				5611876A1E7BC81F003009D2 /* UIView+Nib.swift in Sources */,
 				561187681E7BC81F003009D2 /* UICollectionViewCell+Extension.swift in Sources */,
@@ -750,6 +769,7 @@
 				561186D81E7A8585003009D2 /* CYClassifyViewController.swift in Sources */,
 				561186B71E7A81B8003009D2 /* AppDelegate.swift in Sources */,
 				56F2FA091E7ACEE9002995D1 /* CYFeaturedTopicCell.swift in Sources */,
+				561187751E7BDC29003009D2 /* CYClassifyViewEditCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

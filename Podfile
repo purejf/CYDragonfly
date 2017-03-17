@@ -6,5 +6,8 @@ target ‘Dragonfly’ do
 
 pod ‘SnapKit’
 pod ’Kingfisher‘
+pod ’Alamofire‘
+pod ’SwiftyJSON‘
+pod ’RxSwift‘
 
 end

@@ -101,10 +101,10 @@ class CYRootViewController: UIViewController, UIPageViewControllerDelegate, UIPa
     
     private lazy var vcs: [UIViewController] = {
         var vcs = [UIViewController]()
-        let names: [String] = ["CYClassifyViewController",
+        let names: [String] = ["CYMineViewController",
                                "CYFeaturedViewController",
+                               "CYClassifyViewController",
                                "CYLiveViewController",
-                               "CYMineViewController",
                                "CYRadioViewController"]
         for name: String in names {
             let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String

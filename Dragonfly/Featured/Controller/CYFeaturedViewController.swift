@@ -24,6 +24,8 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
         view.backgroundColor = UIColor.orange
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0.01))
         tableView.tableHeaderView = header
+        tableView.sectionFooterHeight = 0.01
+        tableView.sectionHeaderHeight = 0.01
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource

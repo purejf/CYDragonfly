@@ -117,6 +117,8 @@ class CYFeaturedTopicCell: UITableViewCell {
     // 添加子视图
     private func setup() {
         
+        selectionStyle = .none
+        
         // 标题视图
         titleV.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
