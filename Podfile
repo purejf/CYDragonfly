@@ -5,5 +5,6 @@ use_frameworks!
 target ‘Dragonfly’ do
 
 pod ‘SnapKit’
+pod ’Kingfisher‘
 
 end

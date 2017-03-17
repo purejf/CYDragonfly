@@ -34,7 +34,7 @@ class CYFeaturedTopicItemView: UIView {
         // 标题
         titleL.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalTo(img.snp.top)
+            make.top.equalTo(img.snp.bottom)
         }
         
         // 虚色背景
@@ -56,13 +56,15 @@ class CYFeaturedTopicItemView: UIView {
         self.addSubview(titleL)
         titleL.font = UIFont.systemFont(ofSize: 13)
         titleL.textColor = UIColor.black
+        titleL.text = "这是一个有趣的话题"
         return titleL
     }()
     
     private lazy var countBtn: UIButton = {
         let countBtn = UIButton()
         self.addSubview(countBtn)
-        countBtn.setTitleColor(UIColor.white, for: .normal)
+        countBtn.setTitleColor(UIColor.black, for: .normal)
+        countBtn.setTitle("15万", for: .normal)
         return countBtn
     }()
     
@@ -77,6 +79,7 @@ class CYFeaturedTopicItemView: UIView {
         let img = UIImageView()
         self.addSubview(img)
         img.contentMode = .center
+        img.backgroundColor = UIColor.lightGray
         return img
     }()
 }
@@ -94,6 +97,7 @@ class CYFeaturedTopicCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         // 添加子视图
         setup()
     }
@@ -128,8 +132,33 @@ class CYFeaturedTopicCell: UITableViewCell {
         for index in 0...2 {
             let itemV = CYFeaturedTopicItemView()
             contentView.addSubview(itemV)
+            itemV.backgroundColor = UIColor.brown
             itemV.tag = index + 1
             itemV.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(itemVTapGestHandle(tap:))))
+            switch index {
+            case 0:
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.bottom.equalToSuperview()
+                    make.top.equalTo(titleV.snp.bottom)
+                    make.width.equalToSuperview().multipliedBy(1.0 / 3.0)
+                })
+            case 1:
+                let preItemV = contentView.viewWithTag(index) as! CYFeaturedTopicItemView
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.equalTo(preItemV.snp.right)
+                    make.top.equalTo(titleV.snp.bottom)
+                    make.bottom.equalToSuperview()
+                    make.width.equalTo(preItemV)
+                })
+            case 2:
+                let preItemV = contentView.viewWithTag(index) as! CYFeaturedTopicItemView
+                itemV.snp.makeConstraints({ (make) in
+                    make.left.equalTo(preItemV.snp.right)
+                    make.bottom.right.equalToSuperview()
+                    make.top.equalTo(titleV.snp.bottom)
+                })
+            default: break
+            }
         }
     }
     
@@ -149,21 +178,13 @@ class CYFeaturedTopicCell: UITableViewCell {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let itemW: CGFloat = contentView.frame.size.width / 3.0
-        for index in 0...2 {
-            let itemV = contentView.viewWithTag(index + 1) as! CYFeaturedTopicItemView
-            itemV.frame = CGRect(x: 0, y: 30, width: itemW, height: contentView.frame.size.height - 30)
-        }
-    }
-    
-    private lazy var titleV: CYFeatureTopicTitleView = {
-        let titleV = CYFeatureTopicTitleView()
-        titleV.setupMoreItemClickHandle(handle: { 
+    private lazy var titleV: CYFeaturedTopicTitleView = {
+        let titleV = CYFeaturedTopicTitleView()
+        titleV.setupMoreItemClickHandle(handle: {
             self.gotoMore()
         })
-       self.contentView.addSubview(titleV)
+        self.contentView.addSubview(titleV)
+        titleV.backgroundColor = UIColor.red
         return titleV
     }()
 }

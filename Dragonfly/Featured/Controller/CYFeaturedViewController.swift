@@ -22,7 +22,7 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
     // 配置
     private func setup() {
         view.backgroundColor = UIColor.orange
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0.01))
         tableView.tableHeaderView = header
     }
     
@@ -33,7 +33,7 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +65,9 @@ class CYFeaturedViewController: UIViewController, UITableViewDelegate, UITableVi
         header.setupBottomItemClickHandle(handle: { (type) in
             self._headerBottomItemClick(type: type)
         })
+        header.urls = ["http://img2.imgtn.bdimg.com/it/u=797582015,970274971&fm=214&gp=0.jpg",
+                       "http://img.zcool.cn/community/01392d578c4cb60000018c1ba15f76.JPG",
+                       "http://pic81.huitu.com/res/20160706/1029007_20160706190300146500_1.jpg"]
         return header
     }()
 }

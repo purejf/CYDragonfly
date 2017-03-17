@@ -24,8 +24,6 @@ class CYFeaturedItemView: UIView {
     // 添加子视图
     private func setup() {
         
-        // 父视图未添加约束
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.green
         
         // 图片
@@ -76,6 +74,8 @@ class CYFeaturedItemView: UIView {
     }()
 }
 
+
+/// 底部选项 
 enum CYFeaturedHeaderBottomItemType: Int {
     case Rank = 0
     case Featured
@@ -84,11 +84,17 @@ enum CYFeaturedHeaderBottomItemType: Int {
     case Mall
 }
 
-class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class CYFeaturedHeaderView: UIView {
     
     typealias CYFeaturedBottomItemClickHandle = (_ type: CYFeaturedHeaderBottomItemType) -> Void
     
     typealias CYFeaturedBannerItemClickHandle = (_ index: Int) -> Void
+    
+    var urls: [String]? {
+        didSet {
+            carouselV.urls = urls
+        }
+    }
     
     private let titles = {
         return ["人气榜单",
@@ -133,7 +139,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
     private func setupSubs() {
         
         // 轮播
-        col.snp.makeConstraints { (make) in
+        carouselV.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.66)
         }
@@ -141,7 +147,7 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
         // 底部选项容器视图
         bottomV.snp.makeConstraints { (make) in
             make.left.bottom.right.equalToSuperview()
-            make.top.equalTo(col.snp.bottom)
+            make.top.equalTo(carouselV.snp.bottom)
         }
         
         // 底部选项视图
@@ -186,35 +192,17 @@ class CYFeaturedHeaderView: UIView, UICollectionViewDelegateFlowLayout, UICollec
         }
     }
     
-    private lazy var col: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let col = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        col.backgroundColor = UIColor.yellow
-        col.delegate = self
-        col.dataSource = self
-        self.addSubview(col)
-        return col
+    private lazy var carouselV: CYCarouselView = {
+        let carousel = CYCarouselView.fromNib()
+        self.addSubview(carousel)
+        return carousel as! CYCarouselView
     }()
     
     private lazy var bottomV: UIView = {
         let bv = UIView()
         self.addSubview(bv)
-        bv.backgroundColor = UIColor.red
+        bv.backgroundColor = UIColor.white
         return bv
     }()
-    
-    // MARK: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell.cell(WithCollectionView: collectionView, indexPath: indexPath)
-    }
     
 }

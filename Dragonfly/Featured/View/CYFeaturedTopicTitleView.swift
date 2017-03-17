@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CYFeatureTopicTitleView: UIView {
+class CYFeaturedTopicTitleView: UIView {
     
     typealias CYFeatureTopicTitleVMoreItemClickHandle = () -> Void
     
@@ -82,6 +82,7 @@ class CYFeatureTopicTitleView: UIView {
         more.textAlignment = .right
         more.textColor = UIColor.black
         more.font = UIFont.systemFont(ofSize: 14)
+        more.text = "更多"
         more.isUserInteractionEnabled = true
         more.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(gotoMore)))
         return more
@@ -92,6 +93,7 @@ class CYFeatureTopicTitleView: UIView {
         self.addSubview(title)
         title.textColor = UIColor.black
         title.font = UIFont.systemFont(ofSize: 14)
+        title.text = "头条"
         return title
     }()
     
